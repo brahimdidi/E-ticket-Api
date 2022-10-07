@@ -46,8 +46,7 @@ class Api::V1::EventsController < ApplicationController
         :photo,
         :location,
         :ticket_price,
-        :seats_available,
-        :organizer
+        :seats_available
       )
   end
 end
