@@ -15,15 +15,39 @@ class Api::V1::EventsController < ApplicationController
         render "api/events/show"
     else
         render json: @event.error.full_messages, status: 422
+      end
     end
 
-    def update
-      @event = Event.find(params[:id])
-      if @event.update_attributes(event_params)
+  def update
+    @event = Event.find(params[:id])
+    if @event.update_attributes(event_params)
+      render "api/events/show"
+    else
+      render.json: @event.error.full_messages, status: 422, message: ' event cannot be processed !'
+    end
+  end
+
+  def destroy
+    @event = Event.find(params[:id])
+    if @event.destroy
         render "api/events/show"
-      else
-        render.json: @event.error.full_messages, status: 422
-      end
+    else
+        render json: @event.errors.full_messages, status: 201, message: ' Operation did not succeed!'
+    end
+  end
 
+  private
 
+  def event_params
+      params.require(:event).permit(
+        :name,
+        :description,
+        :event_date,
+        :photo,
+        :location,
+        :ticket_price,
+        :seats_available,
+        :organizer
+      )
+  end
 end
