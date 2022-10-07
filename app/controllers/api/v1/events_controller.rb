@@ -1,11 +1,11 @@
 class Api::V1::EventsController < ApplicationController
   def index
-    events = Event.all
+    @events = Event.all
     render 'api/events/index'
   end
 
   def show
-    event = Event.find(params[:id])
+    @event = Event.find(params[:id])
     render 'api/events/show'
   end
 
