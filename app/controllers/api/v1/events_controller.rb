@@ -14,7 +14,7 @@ class Api::V1::EventsController < ApplicationController
     if @event.after_save
         render "api/events/show"
     else
-        render json: @event.error.full_messages, status: 422
+      render json: { error: 401, message: ' event cannot be processed !' }
       end
     end
 
@@ -23,7 +23,7 @@ class Api::V1::EventsController < ApplicationController
     if @event.update_attributes(event_params)
       render "api/events/show"
     else
-      render.json: @event.error.full_messages, status: 422, message: ' event cannot be processed !'
+      render json: { error: 401, message: ' Operation did not succeed!' }
     end
   end
 
@@ -32,7 +32,7 @@ class Api::V1::EventsController < ApplicationController
     if @event.destroy
         render "api/events/show"
     else
-        render json: @event.errors.full_messages, status: 201, message: ' Operation did not succeed!'
+      render json: { error: 401, message: ' Operation did not succeed!' }
     end
   end
 
