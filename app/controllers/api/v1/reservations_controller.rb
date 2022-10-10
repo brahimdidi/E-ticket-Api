@@ -1,6 +1,6 @@
 class Api::V1::ReservationsController < ApplicationController
   def index
-    @reservations = User.find(params[:user_id]).reservations.order("created_at DESC")
+    @reservations = User.find(params[:user_id]).reservations.order('created_at DESC')
     @reservations_list = []
     @reservations.each do |res|
       @reservations_list << { reservation: res, event: Event.find(res.event_id) }
@@ -21,14 +21,15 @@ class Api::V1::ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
     Reservation.destroy_by(id: params[:id])
     if @reservation.destroy
-      render  json: { message: "Reservation Destroyed succefuly !" }
+      render json: { message: 'Reservation Destroyed succefuly !' }
     else
       render json: { error: 401, message: ' Operation did not succeed!' }
     end
   end
 
   private
+
   def reservation_param
-    params.require(:reservation).permit(:reservation_date, :user_id,:event_id)
+    params.require(:reservation).permit(:reservation_date, :user_id, :event_id)
   end
 end
