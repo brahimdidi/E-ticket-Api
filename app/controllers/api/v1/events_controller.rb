@@ -1,18 +1,18 @@
 class Api::V1::EventsController < ApplicationController
   def index
     @events = Event.all
-    render 'api/events/index'
+    render json: @events
   end
 
   def show
     @event = Event.find(params[:id])
-    render 'api/events/show'
+    render json: @event
   end
 
   def create
     @event = Event.new(event_params)
-    if @event.after_save
-      render 'api/events/show'
+    if @event.save
+      render json: { message: 'Event created succefuly!' }
     else
       render json: { error: 401, message: ' event cannot be processed !' }
     end
@@ -21,7 +21,7 @@ class Api::V1::EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
     if @event.update_attributes(event_params)
-      render 'api/events/show'
+      render json: {message: "#{@event.name} Event updated succefuly" }
     else
       render json: { error: 401, message: ' Operation did not succeed!' }
     end
@@ -29,8 +29,9 @@ class Api::V1::EventsController < ApplicationController
 
   def destroy
     @event = Event.find(params[:id])
+    Event.destroy_by(id: params[:id])
     if @event.destroy
-      render 'api/events/show'
+      render  json: { message: "#{@event.name} Destroyed succefuly !" }
     else
       render json: { error: 401, message: ' Operation did not succeed!' }
     end
