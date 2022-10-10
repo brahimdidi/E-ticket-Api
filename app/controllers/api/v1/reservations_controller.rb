@@ -6,7 +6,11 @@ class Api::V1::ReservationsController < ApplicationController
 
   def create
     @reservations = @reservations.create(reservation_param)
-    render json: @reservations
+    if @reservation.save
+      render json: { message: 'Reservation was created' }
+    else
+      render json: { message: 'reservation could not be created , try again !' }, status: :unauthorized
+    end
   end
 
   def destroy
