@@ -1,5 +1,6 @@
 class Api::V1::ReservationController < ApplicationController
   def index
+    
   end
 
   def create
