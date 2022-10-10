@@ -5,7 +5,7 @@ class Api::V1::ReservationsController < ApplicationController
   end
 
   def create
-    @reservations = Todo.create(todo_param)
+    @reservations = @reservations.create(reservation_param)
     render json: @reservations
   end
 
@@ -14,6 +14,6 @@ class Api::V1::ReservationsController < ApplicationController
 
   private
   def reservation_param
-    params.require(:todo).permit(:title, :done)
+    params.require(:reservations).permit(:reservation_date, :user_id,:event_id)
   end
 end
