@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before :all do
-    @user = User.create(username('test'))
+    @username = (0...50).map { ('a'..'z').to_a[rand(26)] }.join
+    @user = User.create(username: @username)
   end
 
   it 'is valid and added to users' do
@@ -11,14 +12,13 @@ RSpec.describe User, type: :model do
   end
 
   it 'useraname should be correct' do
-    expect(@user.username).to eql 'test'
+    expect(@user.username).to eql @username
   end
   it 'is not valid without a username' do
-    user = User.create
+    user = User.create()
     expect(user).to_not be_valid
   end
-  it 'username must be unique' do
-    user = User.create('test')
-    expect(User.all).to_not include user
+  it 'username must be unique' do 
+    expect{ User.create(username: @username) }.to raise_error(ActiveRecord::RecordNotUnique)
   end
 end
