@@ -15,10 +15,10 @@ RSpec.describe User, type: :model do
     expect(@user.username).to eql @username
   end
   it 'is not valid without a username' do
-    user = User.create()
+    user = User.create
     expect(user).to_not be_valid
   end
-  it 'username must be unique' do 
-    expect{ User.create(username: @username) }.to raise_error(ActiveRecord::RecordNotUnique)
+  it 'username must be unique' do
+    expect { User.create(username: @username) }.to raise_error(ActiveRecord::RecordNotUnique)
   end
 end
