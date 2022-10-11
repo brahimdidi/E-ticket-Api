@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::ReservationsController, type: :controller do
   before :all do
-    @user = User.create(username: 'lilou')
-    @event = Event.create(name: 'eventetes', event_date: '2022-12-12', photo: 'test', location: 'constantine',
+    @user = User.create(username: 'samiha')
+    @event = Event.create(name: 'ev5', event_date: '2022-12-12', photo: 'test', location: 'constantine',
                           ticket_price: 200, seats_available: 230, user_id: @user.id)
   end
 
