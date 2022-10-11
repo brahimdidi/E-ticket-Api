@@ -18,15 +18,6 @@ class Api::V1::EventsController < ApplicationController
     end
   end
 
-  def update
-    @event = Event.find(params[:id])
-    if @event.update_attributes(event_params)
-      render json: { message: "#{@event.name} Event updated succefuly" }
-    else
-      render json: { error: 401, message: ' Operation did not succeed!' }
-    end
-  end
-
   def destroy
     @event = Event.find(params[:id])
     Event.destroy_by(id: params[:id])
