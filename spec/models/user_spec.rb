@@ -20,6 +20,5 @@ RSpec.describe User, type: :model do
   it 'username must be unique' do 
     user = User.create('test')
     expect(User.all).to_not include user
-    p user.errors
   end
 end
