@@ -22,7 +22,7 @@ class Api::V1::EventsController < ApplicationController
     @event = Event.find(params[:id])
     Event.destroy_by(id: params[:id])
     if @event.destroy
-      render json: { message: "#{@event.name} Destroyed succefuly !" }
+      render json: { message: "Event #{@event.name} Destroyed succefuly !" }
     else
       render json: { error: 401, message: ' Operation did not succeed!' }
     end
