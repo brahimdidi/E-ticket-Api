@@ -3,8 +3,9 @@ require 'rails_helper'
 RSpec.describe Api::V1::ReservationsController, type: :controller do
   before :all do
     @username = (0...50).map { ('a'..'z').to_a[rand(26)] }.join
+    @eventname = (0...50).map { ('a'..'z').to_a[rand(26)] }.join
     @user = User.create(username: @username)
-    @event = Event.create(name: 'ev5', event_date: '2022-12-12', photo: 'test', location: 'constantine',
+    @event = Event.create(name: @eventname, event_date: '2022-12-12', photo: 'test', location: 'constantine',
                           ticket_price: 200, seats_available: 230, user_id: @user.id)
   end
 
