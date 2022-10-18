@@ -1,15 +1,20 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
-
-  namespace :api, defaults: { format: :json } do
+  post 'api/v1/register/:username, to: 'users#register'
+  get 'api/v1/login/:username', to: 'users#login'
+  get 'api/v1/users/event/:id', to: 'users#user_event'
+  get 'splash', to: 'users#register'
+  get 'users/:id', to: 'users#index'
+  namespace :api do
     namespace :v1 do
-      resources :users, only: [:index, :create, :show, :destroy] do
-        resources :reservations, only: [:index, :create, :destroy]
+      get 'reservations/:user_id', to: 'reservations#index'
+      post 'reservations/:user_id', to: 'reservations#create'
+      get 'api/v1/event/:id', to: 'eventss#show'
+      delete 'api/v1/events/:id', to: 'events#delete'
+      resources :events, only: %i[index show create destroy] 
+      resources :users do
+        resources :reservations, only: %i[index show]
       end
-      resources :events, only: [:index, :show, :create, :update, :destroy]
     end
   end
-end
+  # Defines the root path route ("/")
+  # root "articles#index"
