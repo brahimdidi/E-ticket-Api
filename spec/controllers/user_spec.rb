@@ -3,9 +3,9 @@ require 'rails_helper'
 
 RSpec.describe Api::V1::UsersController, type: :controller do
   before :each do
-    @imran = User.create(username: 'Imran')
-    @bilal = User.create(username: 'Bilal')
-    @amadou = User.create(username: 'Amadou')
+    @imran = User.create(username: 'Imran',email: "tes@gmail.com",password_digest:"123344")
+    @bilal = User.create(username: 'Bilal',email: "tes2@gmail.com",password_digest:"12335434")
+    @amadou = User.create(username: 'Amadou',email: "tes3@gmail.com",password_digest:"1233344")
     get :index
   end
 
