@@ -1,11 +1,7 @@
 class Api::V1::ReservationsController < ApplicationController
   def index
     @reservations = User.find(params[:user_id]).reservations.order('created_at DESC')
-    @reservations_list = []
-    @reservations.each do |res|
-      @reservations_list << { reservation: res, event: Event.find(res.event_id) }
-    end
-    render json: { reservation: @reservations_list }
+    render json: @reservations
   end
 
   def create
