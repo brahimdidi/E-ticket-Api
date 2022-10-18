@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  post 'api/v1/register/:username, to: 'users#register'
+  post 'api/v1/register/:username/:email', to: 'users#register'
   get 'api/v1/login/:username', to: 'users#login'
   get 'api/v1/users/event/:id', to: 'users#user_event'
   get 'splash', to: 'users#register'
@@ -18,3 +18,4 @@ Rails.application.routes.draw do
   end
   # Defines the root path route ("/")
   # root "articles#index"
+end
