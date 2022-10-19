@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   before :all do
     @username = (0...50).map { ('a'..'z').to_a[rand(26)] }.join
-    @user = User.create(username: @username,email: "tes@gmail.com",password_digest: "123344")
+    @user = User.create(username: @username, email: 'tes@gmail.com', password_digest: '123344')
   end
 
   it 'is valid and added to users' do

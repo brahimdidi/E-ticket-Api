@@ -1,4 +1,4 @@
-class  Api::V1::UsersController < ApplicationController
+class Api::V1::UsersController < ApplicationController
   def index
     @users = User.all
     render json: { user: @users }
@@ -44,7 +44,7 @@ class  Api::V1::UsersController < ApplicationController
       render json: { message: 'User could not be deleted' }, status: :unauthorized
     end
   end
-  
+
   private
 
   def user_params

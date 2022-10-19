@@ -39,7 +39,7 @@ gem 'rack-cors'
 # jwt gem
 gem 'jwt'
 
-#bcrypt
+# bcrypt
 gem 'bcrypt', '~> 3.1.7'
 
 # add cancancan gem for authorisation
