@@ -3,7 +3,7 @@ class Api::V1::UsersController < ApplicationController
     @users = User.all
     render json: { user: @users }
   end
-
+  
   def show
     @user = User.find(params[:id])
     render json: @user
@@ -36,13 +36,8 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def destroy
-    @user = User.find(params[:id])
-    User.destroy_by(id: params[:id])
-    if @user.destroy
-      render json: { message: "User #{@user.username}  was deleted" }, status: :ok
-    else
-      render json: { message: 'User could not be deleted' }, status: :unauthorized
-    end
+    # If token is saved in DB, you can destroy it here
+     head(:ok, status: :no_content) 
   end
 
   private

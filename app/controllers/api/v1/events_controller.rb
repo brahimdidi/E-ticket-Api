@@ -39,7 +39,6 @@ class Api::V1::EventsController < ApplicationController
       :location,
       :ticket_price,
       :seats_available,
-      :user_id
     )
   end
 end
