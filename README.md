@@ -6,7 +6,7 @@
 >Front-end repository: [here](https://github.com/nedjwab/e-ticket-frontend).
 
 ## Backend Schema
-![here](https://github.com/nedjwab/e-ticket-frontend)
+![here](https://github.com/brahimdidi/E-ticket-Api/blob/auth/Image20221020000256.png)
 
 ## Live Demo
 - [Front End](https://github.com/nedjwab/e-ticket-frontend) 
@@ -48,7 +48,7 @@ $ git clone https://github.com/brahimdidi/E-ticket-Api
 
 Go to the app directory
 ```
-$ cd Hotel-Room
+$ cd E-ticket-Api
 ```
 
 Run the server
