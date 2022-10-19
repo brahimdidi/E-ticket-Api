@@ -1,7 +1,7 @@
-class Api::V1::UsersController < ApplicationController
+class  Api::V1::UsersController < ApplicationController
   def index
     @users = User.all
-    render json: @users
+    render json: { user: @users }
   end
 
   def show
@@ -10,11 +10,28 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-    if @user.save
-      render json: { message: 'User was created' }
+    if User.find_by_email(user_params[:email])
+      render json: { error: 'Email exits, try a diffrent one' }, status: :not_acceptable
     else
-      render json: { message: ' user could not be created , try again !' }, status: :unauthorized
+      @user = User.create(user_params)
+
+      if @user.valid?
+        token = encode_token({ user_id: @user.id })
+        render json: { user: @user, token: }, status: :ok
+      else
+        render json: { error: 'Invalid username or password' }, status: :unprocessable_entity
+      end
+    end
+  end
+
+  def login
+    @user = User.find_by(username: user_params[:username])
+
+    if @user&.authenticate(user_params[:password_digest])
+      token = encode_token({ user_id: @user.id })
+      render json: { user: @user, token: }, status: :ok
+    else
+      render json: { error: 'Invalid username or password' }, status: :unprocessable_entity
     end
   end
 
@@ -27,10 +44,10 @@ class Api::V1::UsersController < ApplicationController
       render json: { message: 'User could not be deleted' }, status: :unauthorized
     end
   end
-
+  
   private
 
   def user_params
-    params.require(:user).permit(:username)
+    params.require(:user).permit(:username, :email, :password_digest)
   end
 end
