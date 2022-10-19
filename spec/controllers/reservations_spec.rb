@@ -4,18 +4,9 @@ RSpec.describe Api::V1::ReservationsController, type: :controller do
   before :all do
     @username = (0...50).map { ('a'..'z').to_a[rand(26)] }.join
     @eventname = (0...50).map { ('a'..'z').to_a[rand(26)] }.join
-    @user = User.create(username: @username)
+    @user = User.create(username: @username, email: 'tes@gmail.com', password_digest: '123344')
     @event = Event.create(name: @eventname, event_date: '2022-12-12', photo: 'test', location: 'constantine',
                           ticket_price: 200, seats_available: 230, user_id: @user.id)
-  end
-
-  describe 'Index action' do
-    it 'returns the users reservations' do
-      get :index, params: { user_id: @user.id }
-      expect(response.status).to eq(200)
-      parsed_response = JSON.parse(response.body)
-      expect(parsed_response).not_to be_empty
-    end
   end
 
   describe 'Create reservation action' do

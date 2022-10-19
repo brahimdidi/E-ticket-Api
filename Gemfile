@@ -36,6 +36,12 @@ gem 'bootsnap', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem 'rack-cors'
 
+# jwt gem
+gem 'jwt'
+
+# bcrypt
+gem 'bcrypt', '~> 3.1.7'
+
 # add cancancan gem for authorisation
 gem 'cancancan'
 

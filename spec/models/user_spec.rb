@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   before :all do
     @username = (0...50).map { ('a'..'z').to_a[rand(26)] }.join
-    @user = User.create(username: @username)
+    @user = User.create(username: @username, email: 'tes@gmail.com', password_digest: '123344')
   end
 
   it 'is valid and added to users' do
@@ -17,8 +17,5 @@ RSpec.describe User, type: :model do
   it 'is not valid without a username' do
     user = User.create
     expect(user).to_not be_valid
-  end
-  it 'username must be unique' do
-    expect { User.create(username: @username) }.to raise_error(ActiveRecord::RecordNotUnique)
   end
 end
