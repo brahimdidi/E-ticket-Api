@@ -73,7 +73,6 @@ Give a :star:️ if you like this project!
 Design inspired by [Murat Korkmaz](https://www.behance.net/muratk), design: [Vespa](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)
 
 - Microverse offered guidance on how to make the project more professional
-
 ## 📝 License
 
 This project is [MIT](./LICENSE) licensed.
