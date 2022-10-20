@@ -41,6 +41,7 @@ gem 'jwt'
 
 #rswag
 gem 'rswag'
+gem 'rswag-ui'
 
 # bcrypt
 gem 'bcrypt', '~> 3.1.7'
