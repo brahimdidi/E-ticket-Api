@@ -39,7 +39,7 @@ gem 'rack-cors'
 # jwt gem
 gem 'jwt'
 
-#rswag
+# rswag
 gem 'rswag'
 gem 'rswag-ui'
 
