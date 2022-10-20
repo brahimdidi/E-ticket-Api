@@ -1,75 +1,83 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
+# Book An Appointment With A Doctor
+This application is based booking an Event around the world, you need just to login then book a reservation, add event, view events booked
 
-# Project Name
+Check out the [front-end]()
+repository.
 
-> Description the project.
+# API Documentation
+Check out the [API documentation]()
 
+## GitHub Project
+Check out the [Kanban](https://github.com/users/brahimdidi/projects/2) of our whole project.
 
-## Built With
+# Screenshot
 
-- Major languages
-- Frameworks
-- Technologies used
+# Built with
+- Ruby
+- Ruby on Rails
+- PostgreSQL
 
-## Live Demo (if available)
+[Link to the Front-End](https://github.com/nedjwab/e-ticket-frontend)
 
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
+## installation
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+- clone the repository by running: https://github.com/brahimdidi/E-ticket-Api.git
 
-### Setup
+- navigate to the folder
+  ``` cd <DIRECTORY> ```
+- Install packages
+  ``` npm i ```
+- Run the app
+```sh
+# Load the schema
+rails db:schema:load
+# Create the database
+rake db:create
+# Run database Migration
+rails db:migrate
+```
 
-### Install
+# Authors
 
-### Usage
+👤 **Abiodun Raheem**
+👤 **Nedjwa Bouraiou**
 
-### Run tests
+- GitHub: [@Nedjwab](https://github.com/nedjwab)
+- Twitter: [@nedjwab](https://twitter.com/ned_jwa)
+- LinkedIn: [@Bouraiounedjwa](https://www.linkedin.com/feed/)
 
-### Deployment
+👤 **Ezeoke Stanley*
 
+- GitHub: [@stanley](https://github.com/stanleeeeee)
+- Twitter: [@mstanley](https://twitter.com/mstanmega89)
+- LinkedIn: [@stanley](https://www.linkedin.com/in/stanley-ezeoke/)
 
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
+👤👤 **Brahim Didi**
+- GitHub: [@githubhandle](https://github.com/brahimdidi)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/brahimdidi)
 
-👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-## 🤝 Contributing
+## :handshake: Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
-
 ## Show your support
 
-Give a ⭐️ if you like this project!
+Give a :star:️ if you like this project!
 
 ## Acknowledgments
+Design inspired by [Murat Korkmaz](https://www.behance.net/muratk), design: [Vespa](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign)
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse offered guidance on how to make the project more professional
 
 ## 📝 License
 
 This project is [MIT](./LICENSE) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+
+
+
