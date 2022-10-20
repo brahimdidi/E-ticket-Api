@@ -15,8 +15,8 @@
 ## Kanbanboard
 - [Kanbanboard](https://github.com/users/brahimdidi/projects/2) 
 Initial state :
-- ![here](https://github.com/brahimdidi/E-ticket-Api/blob/auth/Image20221020000256.png)
-- ![here](https://github.com/brahimdidi/E-ticket-Api/blob/auth/Image20221020000256.png)
+- ![here](https://github.com/brahimdidi/E-ticket-Api/blob/dev/back1.png)
+- ![here](https://github.com/brahimdidi/E-ticket-Api/blob/dev/back2.png)
 ## Built With
 
 ### Backend
