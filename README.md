@@ -10,7 +10,7 @@
 
 ## Live Demo
 - [Front End](https://github.com/nedjwab/e-ticket-frontend) 
-- [Back End API](https://github.com/nedjwab/e-ticket-frontend)
+- [Back End API](https://radiant-island-08872.herokuapp.com/)
 
 ## Built With
 
