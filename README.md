@@ -9,7 +9,7 @@
 ![here](https://github.com/brahimdidi/E-ticket-Api/blob/auth/Image20221020000256.png)
 
 ## Live Demo
-- [Front End](https://github.com/nedjwab/e-ticket-frontend) 
+- [Front End](https://e-ticket-events.herokuapp.com/) 
 - [Back End API](https://radiant-island-08872.herokuapp.com/)
 
 ## Built With
