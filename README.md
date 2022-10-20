@@ -19,7 +19,6 @@
 - [x] Programming Language: [Ruby](https://www.ruby-lang.org/en/)
 - [x] Framework: [Ruby on Rails](https://rubyonrails.org/)
 - [x] Linter: [Rubocop](https://rubocop.org/)
-- [x] Code Editor: [VS Code](https://code.visualstudio.com/)
 - [x] Database: [PostgreSQL](https://www.postgresql.org/)
 - [x] Testing Framework: [RSpec](https://rspec.info/)
 
@@ -29,7 +28,6 @@
 - [x] Framework: [React](https://reactjs.org/)
 - [x] Library: [Redux](https://redux.js.org/)
 - [x] Linter: [ESLint](https://eslint.org/)
-- [x] Code Editor: [VS Code](https://code.visualstudio.com/)
 - [x] Testing Framework: [Jest](https://jestjs.io/)
 
 ## Getting Started

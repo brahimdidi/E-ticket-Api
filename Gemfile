@@ -39,6 +39,9 @@ gem 'rack-cors'
 # jwt gem
 gem 'jwt'
 
+#rswag
+gem 'rswag'
+
 # bcrypt
 gem 'bcrypt', '~> 3.1.7'
 
