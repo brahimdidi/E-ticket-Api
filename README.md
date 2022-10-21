@@ -1,62 +1,146 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
-# Project Name
-
-> Description the project.
 
 
+## E-ticket
+
+> E-ticket is a web and mobile app that allows users to book an event . It also allows users to see the list of all reservation.Beside that the user can add a bew event.
+>Front-end repository: [here](https://github.com/nedjwab/e-ticket-frontend).
+
+## Backend Schema
+![here](https://github.com/brahimdidi/E-ticket-Api/blob/auth/Image20221020000256.png)
+
+## Live Demo
+- [Front End](https://e-ticket-events.herokuapp.com/) 
+- [Back End API](https://radiant-island-08872.herokuapp.com/)
+
+## Team members : 2
+
+## Kanbanboard
+- [Kanbanboard](https://github.com/users/brahimdidi/projects/2) 
+Initial state :
+- ![here](https://github.com/brahimdidi/E-ticket-Api/blob/dev/back1.png)
+- ![here](https://github.com/brahimdidi/E-ticket-Api/blob/dev/back2.png)
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+### Backend
 
-## Live Demo (if available)
+- [x] Programming Language: [Ruby](https://www.ruby-lang.org/en/)
+- [x] Framework: [Ruby on Rails](https://rubyonrails.org/)
+- [x] Linter: [Rubocop](https://rubocop.org/)
+- [x] Database: [PostgreSQL](https://www.postgresql.org/)
+- [x] Testing Framework: [RSpec](https://rspec.info/)
 
-[Live Demo Link](https://livedemo.com)
+### Frontend
 
+- [x] Programming Language: [JavaScript](https://www.javascript.com/)
+- [x] Framework: [React](https://reactjs.org/)
+- [x] Library: [Redux](https://redux.js.org/)
+- [x] Linter: [ESLint](https://eslint.org/)
+- [x] Testing Framework: [Jest](https://jestjs.io/)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
 
 ### Install
 
+In the terminal, go to your file directory and run this command.
+
+```
+$ git clone https://github.com/brahimdidi/E-ticket-Api
+```
+
 ### Usage
+
+Go to the app directory
+```
+$ cd E-ticket-Api
+```
+
+Run the server
+```
+$ rails server
+```
+
+You can check the linter issues and fix them
+```
+$ rubocop -A
+```
+
+### Setup
+
+Install Gems
+```
+$ bundle install
+```
+
+Create the database
+```
+$ rails db:create
+```
+
+Migrate database schema
+```
+$ rails db:migrate
+```
+
+Seed the database
+```
+$ rails db:seed
+```
 
 ### Run tests
 
-### Deployment
+To install rspec, in the terminal kindly run this command
 
+```
+$ gem install rspec
+```
 
+To run tests, please run this command
+```
+$ rspec ./spec/#{filename}_spec.rb
+```
 
+- [x] A web browser like [Google Chrome](https://www.google.com/chrome/).
+- [x] A code editor like [Visual Studio Code](https://code.visualstudio.com/).
+- [x] A terminal to run the code.
+- [x] [Ruby](https://www.ruby-lang.org/en/) installed on your computer.
+- [x] [Rails](https://rubyonrails.org/) installed on your computer.
+
+You can check if Git is installed by running the following command in the terminal.
+```
+$ git --version
+```
+
+Likewise for Ruby installation.
+```
+$ ruby --version && irb
+```
+
+To install rails, in the terminal kindly run this command
+```
+$ gem install rails
+```
 ## Authors
 
-👤 **Author1**
+👤 **Nedjwa Bouraiou**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@nedjwab](https://github.com/nedjwab).
+- Twitter: [@nedjwab](https://twitter.com/ned_jwa)
+- LinkedIn: [nedjwa](https://www.linkedin.com/in/nedjwa-bouraiou/)
 
-👤 **Author2**
+👤 **Stanely** 
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@stanely](https://github.com/Stanleeeeee).
+- Twitter: [@stanely](https://github.com/Stanleeeeee)
+- LinkedIn: [stanely](https://github.com/Stanleeeeee)
+
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/brahimdidi/E-ticket-Api/issues).
 
 ## Show your support
 
@@ -64,12 +148,12 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- [Microverse](https://www.microverse.org/)
+- Code Reviewers
+- Coding Partners
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+![](https://img.shields.io/badge/Microverse-blueviolet)
