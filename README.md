@@ -12,6 +12,8 @@
 - [Front End](https://e-ticket-events.herokuapp.com/) 
 - [Back End API](https://radiant-island-08872.herokuapp.com/)
 
+## Team members : 2
+
 ## Kanbanboard
 - [Kanbanboard](https://github.com/users/brahimdidi/projects/2) 
 Initial state :
